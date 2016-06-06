@@ -1,0 +1,23 @@
+/* ==========================================================================
+	 Nav (Nav>Ul)
+	 ========================================================================== */
+
+nav>ul {
+	list-style: none;
+	padding:0;
+	&>li{
+		text-indent: 0;
+		content: none;
+		&:before{
+			content: none;
+		}
+		&>a{
+			border-color:transparent;
+			color:inherit;
+			&:hover{
+				border-bottom-color:$textColor;
+				color:inherit;
+			}
+		}
+	}
+}

@@ -1,0 +1,38 @@
+/* ==========================================================================
+   Figures
+   ========================================================================== */
+
+/*
+ * Addresses margin not present in IE 8/9 and Safari 5.
+ */
+
+figure {
+    margin: 20px;
+    border:5px solid $bodyBackground;
+    position: relative;
+    background: $bodyBackground;
+    &>*{
+      max-width:100%;
+    }
+    &:before,
+    &:after{
+        content: '';
+        position: absolute;
+        height: 29px;
+        width: 39px;
+        background: url('./../../images/frame-fleur.png') no-repeat;
+        z-index: -1;
+    }
+    &:before{
+      top:-15px;
+      left:-20px;
+    }
+    &:after{
+      bottom:-15px;
+      right:-20px;
+    }
+}
+figcaption{
+  font-size:.8em;
+  text-align:right;
+}

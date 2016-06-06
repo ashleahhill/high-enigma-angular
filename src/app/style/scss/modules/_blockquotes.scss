@@ -1,0 +1,31 @@
+/* ==========================================================================
+   Blockquote
+   ========================================================================== */
+
+blockquote{
+  background: rgba(219,219,219,.5);
+  padding:1em;
+  margin:1em;
+  font-size: 1.1em;
+  &>p{
+    &:first-child{
+      margin-top:0;
+    }
+    &:last-child{
+      margin-bottom: 0;
+    }
+  }
+  // In a figure for grouping attibution
+  figure>&{
+    margin: 0;
+  }
+  &+figcaption{
+    text-align: right;
+    margin-left:20%;
+    padding:.5em;
+    font-size:1em;
+  }
+  &+figcaption:before{
+    content:'— ';
+  }
+}

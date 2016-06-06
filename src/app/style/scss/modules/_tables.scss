@@ -1,0 +1,37 @@
+/* ==========================================================================
+   Tables
+   ========================================================================== */
+
+/*
+ * Remove most spacing between table cells.
+ */
+
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+    background: rgba($white,0.3);
+}
+caption,
+thead,
+tfoot{
+  text-align: left;
+}
+caption{
+  font-weight: 300;
+  font-size: 1.5em;
+}
+thead,tfoot{
+  font-weight: 700;
+}
+th,
+td{
+  padding:.5em .7em .4em;
+}
+tbody>tr{
+  &>td{
+    border-top:1px dotted #999;
+  }
+  &:first-child>td{
+    border-top:0;
+  }
+}

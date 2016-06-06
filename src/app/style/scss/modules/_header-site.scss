@@ -1,0 +1,52 @@
+/* ==========================================================================
+   Site Header
+   ========================================================================== */
+
+header.site-header{
+  background: transparent;
+  @include background-image(
+    linear-gradient(
+      left
+      , rgba(255, 255, 255, 0) 30%
+      , rgba(255, 255, 255, 1) 60%
+    )
+  );
+  padding: 0em 1em .5em 13rem;
+  @include transition(padding-left, .3s);
+  //shadow
+  &:before{
+    right: 0;
+    left: 0;
+    box-shadow: 160px 0 10px hsla(0, 0%, 0%, .3);
+  }
+  &>h1 {
+    font: normal 400 2.2em/1.2 $displayFontFamily;
+    color:$grayLighter;
+    margin:0 0 -.2em;
+    padding-top:.2em;
+  }
+  &>img{
+    position: absolute;
+    left: 12px;
+    top: 0;
+    z-index: -1;
+  }
+  /** page header nav **/
+  &>nav>ul {
+    list-style: none;
+    padding:0;
+    margin:0;
+    font: normal 400 1.5rem/1 $displayFontFamily;
+    &>li{
+      padding-left:2rem;
+      display: inline-block;
+      vertical-align: baseline;
+      &:first-child{
+        padding-left:0;
+      }
+      &.is-active{
+          font-size:1.5em;
+      }
+    }
+  }
+}

@@ -1,0 +1,28 @@
+/* ==========================================================================
+   Links
+   ========================================================================== */
+
+a {
+  color:$linkColor;
+  text-decoration: none;
+  border-bottom: 1px solid $linkColor;
+  &:focus {
+    outline: none;
+    background:transparentize($trans-purple,.25);
+    color:$blackLight;
+  }
+  &:active,
+  &:hover {
+      outline: 0;
+  }
+  &:hover{
+    border-bottom-style: dotted; 
+  }
+  &[href*='http://']:after{
+    @extend %icon-offsiteArrow;
+    display: inline-block;
+    border-bottom:0;
+    margin-left: .2em;
+    text-indent:0;  
+  }
+}

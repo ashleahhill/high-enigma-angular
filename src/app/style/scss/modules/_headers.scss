@@ -1,0 +1,27 @@
+/* ==========================================================================
+   Headers
+   ========================================================================== */
+
+header{
+  position: relative;
+  @extend %clearfix;
+  // shadow
+  &:before{
+    content: '';
+    position: absolute;
+    bottom: 0;
+    top: 0;
+    border-radius: 100px/ 10px;
+    z-index: -1;
+  }
+}
+
+section header{
+  padding:1px .5em .5em;
+  background: white;
+  &:before{
+    box-shadow: 0 0 10px rgba(0, 0, 0, .3);
+    left: 10%;
+    right: 10%;
+  }
+}

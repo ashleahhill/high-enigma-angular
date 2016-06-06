@@ -1,0 +1,21 @@
+// Utitility Styles, Functions
+
+%clearfix{
+	&:after{
+		content:'';
+		display: block;
+		clear:both;
+	}
+}
+%icon-offsiteArrow{
+	font-family: 'entypo-icons', wingdings;
+    content:'3';
+}
+%icon-leaf{
+	font-family: 'entypo-icons', wingdings;
+	content:'G';
+}
+
+@mixin border($width:1px, $style:unquote('solid'), $color:'$grey'){
+	border:$width $style $color;
+}

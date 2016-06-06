@@ -1,0 +1,76 @@
+
+@import "base/base";
+
+@import "modules/links";
+@import "modules/headers";
+@import "modules/footers";
+@import "modules/figures";
+@import "modules/forms";
+@import "modules/figures";
+@import "modules/blockquotes";
+@import "modules/tables";
+@import "modules/lists";
+@import "modules/nav";
+@import "modules/header-site";
+@import "modules/footer-site";
+@import "modules/theme-background";
+
+
+@media all and (max-width: 500px){
+	header.site-header{
+		padding-left: 30%; /*bg fade, will cover logo... +10px*/
+		&>h1{
+			font-size: 1.5em
+		}
+		&>nav>ul>li{
+			display: none;
+			&.is-active{
+				display: block;
+				font-size:1.5rem;
+				padding-left:0;
+			}
+		}
+	}
+	.page-wrapper{
+		margin-top: 1rem;
+		margin-right:.5rem;
+		margin-left:1rem;
+	}
+	ul>li,
+	ol>li{
+		padding:{
+			left:1.2em;
+		}
+		margin:{
+			top:.5em;
+			bottom:.5em;
+		}
+		text-indent:-1.2em;
+		&:before{
+			width:1.2em;
+			text-align:left;
+		}
+		&>ul>li,
+		&>ul>li>ul>li,
+		&>ul>li>ul>li>ul>li{
+			text-indent:0;
+			padding-left:0;
+		}
+	}
+	body>footer{
+		padding-bottom: 1.5em;
+	}
+	.site-copyright{
+		display:block;
+		&:after{
+			content:'Credits page';
+			display: block;
+		}
+	}
+}
+
+@media all and (min-width:1000px){
+	.page-wrapper{
+		font-size:1.1em;
+	}
+}

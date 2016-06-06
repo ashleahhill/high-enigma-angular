@@ -1,0 +1,80 @@
+/* ==========================================================================
+   Lists and Nav
+   ========================================================================== */
+
+// ordered list and unordered lists
+ol,
+ul{
+  margin: 1em 0;
+  padding:0;
+  list-style:none;
+  & ol,
+  & ul{
+    margin:0;
+  }
+
+  &>li:before{
+    display:inline-block;
+    width:2em;
+    text-align: center;
+    text-indent: 0;
+  }
+}
+
+li{
+  padding-left: 2em;
+  text-indent: -2em;
+  &>p{
+    text-indent:0;
+    margin-top:0;
+  }
+}
+
+// Outine Style Numbering
+ol{
+  counter-reset: list;
+  &>li:before{
+    counter-increment: list;
+    content: counter(list,upper-roman) '.'; 
+
+    ol &{
+      content: counter(list,upper-alpha) '.'; 
+
+      ol &{
+            content: counter(list,decimal) '.'; 
+
+        ol &{
+          content: counter(list,lower-alpha) '.'; 
+        }
+      }
+    }
+  }
+}
+
+// Bulleted Lists
+ul>li:before{
+  @extend %icon-leaf;
+
+  ul &{
+    color:$grayDarker;
+
+    ul &{
+      color:$grayLighter;
+      
+      ul &{ 
+        font-family: $baseFontFamily;
+        content:'-';
+        color:$grayDarker;
+      }
+    }
+  }
+}
+
+// Definition Lists
+
+dt{
+  font-weight: 600;
+}
+dd{
+  margin-left:2em;
+}

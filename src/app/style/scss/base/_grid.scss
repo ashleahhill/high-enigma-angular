@@ -1,0 +1,27 @@
+// Grid
+
+// sticky footer
+html, body{
+	min-height:100%;
+	height:100%;
+	margin:0;
+	padding:0;
+}
+.site-wrapper{
+	min-height: 100%;
+	height: auto!important;
+	height: 100%;
+	margin: 0 auto -3.75rem;
+}
+.site-wrapper>.push,
+.site-footer{
+	min-height:3rem; //height of "me" + footer padding
+}
+// One column
+.page-wrapper{
+  margin:3em 3em 4em 90px;
+  overflow: hidden;
+	>*:first-child{
+	  margin-top: 0;
+	}
+}

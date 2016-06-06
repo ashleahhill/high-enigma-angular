@@ -1,0 +1,182 @@
+/* ==========================================================================
+   Forms
+   ========================================================================== */
+
+/*
+ * Define consistent border, margin, and padding.
+ */
+
+fieldset {
+    @include border($color:rgba($gray,.3));
+    border-width: 0 0 0 1px;
+    margin: 1em 0;
+    padding: 1em;
+    background: $white;
+}
+
+
+/*
+ * 1. Corrects font family not being inherited in all browsers.
+ * 2. Corrects font size not being inherited in all browsers.
+ * 3. Addresses margins set differently in Firefox 4+, Safari 5, and Chrome
+ */
+
+button,
+input,
+select,
+textarea {
+    font-family: inherit; /* 1 */
+    font-size: 100%; /* 2 */
+    margin: 0; /* 3 */
+    &:focus {
+      outline: none;
+      box-shadow: 0px 0px 5px rgba($green, .5);
+      border-color: rgba($green, .5);
+    }
+}
+
+/*
+ * 1. Avoid the WebKit bug in Android 4.0.* where (2) destroys native `audio`
+ *    and `video` controls.
+ * 2. Corrects inability to style clickable `input` types in iOS.
+ * 3. Improves usability and consistency of cursor style between image-type
+ *    `input` and others.
+ */
+
+button,
+html input[type="button"], /* 1 */
+input[type="reset"],
+input[type="submit"] {
+    display: block;
+    margin:0 0 1em;
+    -webkit-appearance: none; /* 2 */
+    cursor: pointer; /* 3 */
+    @include border-radius($inputBorderRadius);
+    @include border($color:$gray);
+    background: $grayDarker 0 0 no-repeat;
+    @include background-image(linear-gradient(top, $gray, $grayDarker));
+    box-shadow: 
+      inset 0 0 5px rgba($white, 0.4)
+      , inset 0 -1px 2px rgba($black, 0.75)
+      , 1px 1px 4px rgba($black, 0.3);
+    padding:.6em .75em .5em;
+    color:$grayLighter;
+    text-shadow:0 0 2px rgba($black,0.75);
+    &:hover{
+        margin-top:1px;
+        margin-left:1px;
+        text-shadow:0 0 4px $black;
+    }
+}
+
+button[disabled],
+input[disabled] {
+    cursor: default;
+    background: $gray 0 0 no-repeat;
+    @include background-image(linear-gradient(top, $gray, $grayLighter));
+    &:hover {
+        margin-top:0;
+        margin-left:0;
+    }
+}
+
+/* 
+* Textbox-like fields
+*
+*/
+
+input,
+select,
+textarea{
+  @include border($color:$grayLighter);
+  padding:.5em;
+  @include border-radius($inputBorderRadius);
+  label>&{
+    @include box-sizing('border-box');
+    width:100%;
+  }
+  label+&{
+    vertical-align: middle;
+  }
+}
+
+/* 
+* Thumbnail-like fields
+*
+*/
+
+input[type=color],
+input[type=image]{
+  @include border-radius(0);
+  background:$white;
+  padding:.25em;
+  height:2em;
+  width:2em;
+}
+
+/*
+ * 1. Addresses box sizing set to `content-box` in IE 8/9.
+ * 2. Removes excess padding in IE 8/9.
+ */
+
+input[type="checkbox"],
+input[type="radio"] {
+    @include box-sizing('border-box'); /* 1 */
+    padding: 0; /* 2 */
+  label>&{
+    width:auto;
+  }
+}
+
+/*
+ * 1. Addresses `appearance` set to `searchfield` in Safari 5 and Chrome.
+ * 2. Addresses `box-sizing` set to `border-box` in Safari 5 and Chrome
+ *    (include `-moz` to future-proof).
+ */
+
+input[type="search"] {
+    -webkit-appearance: textfield; /* 1 */
+    @include box-sizing('content-box');/* 2 */
+    label>&{
+        @include box-sizing('border-box');
+        width:100%;
+    }
+    label+&{
+      vertical-align: middle;
+    }
+}
+
+/*
+ * 1. Removes default vertical scrollbar in IE 8/9.
+ * 2. Improves readability and alignment in all browsers.
+ */
+
+textarea {
+    overflow: auto; /* 1 */
+    vertical-align: top; /* 2 */
+    resize:vertical;
+    height:5em;
+    width:16em; /* Almost Golden Ratio (height+padding) = 16 */
+}
+label{
+  display: block;
+  margin:1em 0;
+  p>&{
+    display:inline;
+  }
+}
+
+// Placeholders
+// Can't be in the same rule usally for some reason
+
+:-ms-input-placeholder {
+    color: $grayLighter;
+}
+
+::-webkit-input-placeholder {
+   color: $grayLighter;
+}
+
+:-moz-placeholder {  
+   color: $grayLighter;  
+}
