@@ -1,9 +1,33 @@
 <div>
+<header class="site-header">
+	<!-- <img src="../style/images/alh-white.png"/> -->
+	<h1>Ashley Hill</h1>
+	<nav>
+	<ul>
+		<li class="is-active">
+			<a href="/readme">me</a>
+		</li>
+		<li class="is-active">
+			<a href="/readme">doodles.</a>
+		</li>
+		<li class="is-active">
+			<a href="/readme">tools / insp</a>
+		</li>
+	</ul>
+
 <ul>
   <li><a href="#/">Start</a></li>
   <li><a href="#/home">Home (embedded and external images)</a></li>
   <li><a href="#/about">About</a></li>
   <li><a href="#/haml">HAML (test HAML templates)</a></li>
 </ul>
-<div ui-view='content'></div>
+</nav>
+</header>
+<section class="page-wrapper" ui-view="content"></section>
+<div class="push"></div>
+<footer class="site-footer">
+	<address>
+		<a href="#"> &mdash;me </a>
+	<small class="site-copyright"><a href="/credits"> &copy; 2016 Ashley Hill</a></small>
+</footer>
 </div>

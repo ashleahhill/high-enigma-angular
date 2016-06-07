@@ -1,8 +1,8 @@
 const route = (entry, resolve) => ({
-  name: entry,
-  // name: 'app.' + entry,
+  // name: entry,
+  name: 'app.' + entry,
   url: '/' + entry,
-  // parent: 'app',
+  parent: 'app',
   views: {
     content: {
       template: '<' + entry + '></' + entry + '>'
@@ -25,9 +25,10 @@ export default app => {
   // We have to use hardcoded value for 'require' so it can be statically built
   const RouterConfig = function ($stateProvider, $urlRouterProvider) {
     $stateProvider
-      // .state('app', {
-      //   template: require('./frame/index.html')
-      // })
+      .state('app', {
+        abstract: true,
+        template: require('./frame/index.html')
+      })
 
       .state(route('home', callback =>
         require.ensure([], () =>

@@ -19,12 +19,8 @@ module.exports = {
     loaders: [
       {
         test: /\.(js|jsx)$/, 
-        include: path.resolve('src'),
-        loader: 'babel-loader?presets[]=es2015'
-       // loader: 'babel-loader',
-        // query: {
-        //   presets: ['es2015']
-        // }
+        include:       path.resolve(__dirname, './src/'),
+       loader: 'babel-loader'
       },
       {test: /\.css$/, loader: ExtractTextPlugin.extract('style', 'css?sourceMap')},
 
