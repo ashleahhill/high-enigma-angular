@@ -2,6 +2,7 @@
 
 // compass modules
 @import "~compass-mixins/lib/compass/css3";
+@import "~compass-mixins/lib/animation/core";
 
 // custom mixins
 @import "utilities";
@@ -17,3 +18,4 @@
 @import "normalize";
 @import "typography";
 @import "grid";
+@import "keyframes";

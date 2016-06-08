@@ -1,8 +1,8 @@
 const route = (entry, resolve) => ({
     // name: entry,
-    name: 'app.' + entry,
+    name: 'me.' + entry,
     url: '/' + entry,
-    parent: 'app',
+    parent: 'me',
     views: {
         content: {
             template: '<' + entry + '></' + entry + '>'
@@ -24,23 +24,34 @@ export default app => {
 
     // We have to use hardcoded value for 'require' so it can be statically built
     const RouterConfig = function($locationProvider, $stateProvider, $urlRouterProvider) {
-        $stateProvider
-            .state('app', {
-                abstract: true,
-                template: require('./frame/index.html'),
-                resolve: {
-                   async: ['$q', function($q) {
-                      const defer = $q.defer();
 
-                      require.ensure([], () => defer.resolve(app.register(require('./frame/site-header').name)));
-                      return defer.promise;
-                  }] 
-                }
+      $locationProvider.html5Mode(true).hashPrefix('!');
+
+        $stateProvider
+            .state({
+                name: 'me',
+                abstract: true,
+                template: require('./frame/index.html')
             })
+
+        .state({
+          name: 'me.test',
+          parent: 'me',
+          url: '/test',
+          views: {
+            content: {
+              template: '<div>test</div>'
+            }
+          }
+        })
 
         .state(route('home', callback =>
             require.ensure([], () =>
                 callback(app.register(require('./home').name)))))
+
+        .state(route('resume', callback =>
+            require.ensure([], () =>
+                callback(app.register(require('./resume').name)))))
 
         .state(route('about', callback =>
             require.ensure([], () =>

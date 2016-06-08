@@ -22,6 +22,8 @@ $column-width   : 4em;            // each column is 4em wide
 $gutter-width   : 1em;            // 1em gutters between columns
 $grid-padding   : $gutter-width;
 $show-grid-backgrounds  : false;
+$site-min-width: 320px;
+$breakpoint-medium: 700px;
 
 // --------------------------------------------------
 // colors
@@ -65,7 +67,8 @@ $trans-purple:          rgba($purple, .5);
 // -------------------------
 $bodyBackground:        $white !default;
 $textColor:             $blackLight;
-
+$bodyBackgroundNight:   #666;
+$textColorNight:        $white;
 
 // Links
 // -------------------------

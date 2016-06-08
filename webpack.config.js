@@ -22,6 +22,7 @@ module.exports = {
         include:       path.resolve(__dirname, './src/'),
        loader: 'babel-loader'
       },
+      { test: /\.md$/, loader: "html!markdown" },
       {test: /\.css$/, loader: ExtractTextPlugin.extract('style', 'css?sourceMap')},
 
       {
@@ -59,7 +60,11 @@ module.exports = {
       chunkModules: false,
       colors: true
     },
-    contentBase: './src'
+    contentBase: './src',
+    watchOptions: {
+      aggregateTimeout: 300,
+      poll: 1000
+    },
   },
   eslint: {
     configFile: 'src/.eslintrc'

@@ -111,3 +111,10 @@ sup {
 sub {
     bottom: -0.25em;
 }
+
+body {
+      color:$textColor;
+      &.is-night {
+        color: $textColorNight;
+      }
+}
