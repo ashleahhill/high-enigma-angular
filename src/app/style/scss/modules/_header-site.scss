@@ -15,8 +15,8 @@ header.site-header{
     @include background-image(
     linear-gradient(
       left
-      , rgba(darken($bodyBackgroundNight, 50%), 0) 30%
-      , rgba(darken($bodyBackgroundNight, 50%), 1) 60%
+      , rgba(darken($bodyBackgroundNight, 20%), 0) 30%
+      , rgba(darken($bodyBackgroundNight, 20%), 1) 60%
     )
   );
     color: darken($textColorNight, 50%);

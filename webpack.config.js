@@ -60,11 +60,7 @@ module.exports = {
       chunkModules: false,
       colors: true
     },
-    contentBase: './src',
-    watchOptions: {
-      aggregateTimeout: 300,
-      poll: 1000
-    },
+    contentBase: './src'
   },
   eslint: {
     configFile: 'src/.eslintrc'
