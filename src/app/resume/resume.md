@@ -1,10 +1,3 @@
-Ashley Hill 
-Front End Developer, Architect, Dreamer
-
-(804) 306-5136, me@ashleyhill.me, 1801 Chasewyck Place #109, Chesapeake, VA 23320
-
-Looking for a balance between model and view in the Single Page App Age.
-
 ## Skills
 
 * AngularJS ~ 2 years

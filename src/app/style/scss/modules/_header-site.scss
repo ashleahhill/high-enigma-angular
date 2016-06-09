@@ -2,82 +2,71 @@
    Site Header
    ========================================================================== */
 
-header.site-header{
-  background: transparent;
-  @include background-image(
-    linear-gradient(
-      left
-      , rgba($bodyBackground, 0) 30%
-      , rgba($bodyBackground, 1) 60%
-    )
-  );
-  &.is-night {
-    @include background-image(
-    linear-gradient(
-      left
-      , rgba(darken($bodyBackgroundNight, 20%), 0) 30%
-      , rgba(darken($bodyBackgroundNight, 20%), 1) 60%
-    )
-  );
-    color: darken($textColorNight, 50%);
-  }
-  padding: 0em 1em .5em 13rem;
-  @include transition(padding-left, .3s);
-  //shadow
-  &:before{
-    right: 0;
-    left: 0;
-    box-shadow: 160px 0 10px hsla(0, 0%, 0%, .3);
-  }
-  &>h1 {
-    font: normal 400 2.2em/1.2 $displayFontFamily;
-    color: lighten($textColor, 50%);
-    margin:0 0 -.2em;
-    padding-top:.2em;
-  }
-  &.is-night > h1 {
-    color: darken($textColorNight, 80%);
-  }
-  &>img{
-    position: absolute;
-    left: 12px;
-    top: 0;
-    z-index: -1;
-  }
-  /** page header nav **/
-  &>nav>ul {
-    list-style: none;
-    padding:0;
-    margin:0;
-    font: normal 400 1.5rem/1 $displayFontFamily;
-    &>li{
-      padding-left:2rem;
-      display: inline-block;
-      vertical-align: baseline;
-      &:first-child{
-        padding-left:0;
-      }
-      &.is-active{
-          font-size:1.5em;
-      }
+header.site-header {
+    background: transparent;
+    @include background-image( linear-gradient( left, rgba($bodyBackground, 0) 30%, rgba($bodyBackground, 1) 60%));
+    &.is-night {
+        @include background-image( linear-gradient( left, rgba(darken($bodyBackgroundNight, 2%), 0) 30%, rgba(darken($bodyBackgroundNight, 2%), 1) 60%));
     }
-  }
-
+    padding: 0em 1em .5em 13rem;
+    @include transition(padding-left, .3s);
+    //shadow
+    &:before {
+        right: 0;
+        left: 0;
+        box-shadow: 160px 0 10px hsla(0, 0%, 0%, .3);
+    }
+    &>h1 {
+        font: normal 400 2.2em/1.2 $displayFontFamily;
+        color: lighten($textColor, 50%);
+        margin: 0 0 -.2em;
+        padding-top: .2em;
+        &>a {
+            border-color: transparent;
+        }
+    }
+    &>img {
+        position: absolute;
+        left: 12px;
+        top: 0;
+        z-index: -1;
+    }
+    /** page header nav **/
+    &>nav>ul {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+        font: normal 400 1.5rem/1 $displayFontFamily;
+        &>li {
+            padding-left: 2rem;
+            display: inline-block;
+            vertical-align: baseline;
+            @include transition(font-size, .3s);
+            &:first-child {
+                padding-left: 0;
+            }
+            &.is-active {
+                font-size: 1.5em;
+            }
+        }
+    }
 }
 
- @media all and (max-width: 500px){
-  header.site-header{
-    padding-left: 33%; /*bg fade, will cover logo... +10px*/
-    &>h1{
-      font-size: 1.5em
+@media all and (max-width: 500px) {
+    header.site-header {
+        padding-left: 33%;
+        /*bg fade, will cover logo... +10px*/
+        text-align: right;
+        &>h1 {
+            font-size: 1.5em
+        }
+        &>nav>ul>li {
+            display: none;
+            &.is-active {
+                display: block;
+                font-size: 1.5rem;
+                padding-left: 0;
+            }
+        }
     }
-    &>nav>ul>li{
-      display: none;
-      &.is-active{
-        display: block;
-        font-size:1.5rem;
-        padding-left:0;
-      }
-    }
-  }
 }

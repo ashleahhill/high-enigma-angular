@@ -1,7 +1,22 @@
-const $inject = ['$scope', '$state'];
-const SiteHeaderController = function ($scope, $state) {
-  this.name = "site header";
-  this.setActive = (event, newState) => {console.log(arguments)};
+
+
+const $inject = ['$scope', '$state', 'NavItems'];
+
+/*
+ * @ngdoc controller
+ * @name SiteHeaderController
+ * @description
+ * Bind nav items and current state
+ */
+const SiteHeaderController = function ($scope, $state, NavItems) {
+
+
+  this.items = NavItems.items;
+
+  this.setActive = (event, newState) => {
+  	this.state = newState.url;
+
+  };
   
   $scope.$on('$stateChangeSuccess', this.setActive );
 

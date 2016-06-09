@@ -1,14 +1,14 @@
 const $inject = [];
-const home = function () {
+const stuff = function () {
 
   return {
   	replace: true,
     controller: () => {},
     controllerAs: 'controller',
-    template: require('./home.html')
+    template: require('./stuff.html')
   };
 };
 
-home.$inject = $inject;
+stuff.$inject = $inject;
 
-export default home;
+export default stuff;

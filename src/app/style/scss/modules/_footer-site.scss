@@ -5,7 +5,9 @@
 .site-footer{
   position: relative;
   &>address{
-      font: normal 400 2.2em/1 $displayFontFamily; 
+      // font: normal 400 2.2em/1 $displayFontFamily; 
+      // font: normal 400 1.2em/1 $displayFontFamily; 
+      font-family: $displayFontFamily; 
       float: right;
     &>a{
       text-decoration: none;

@@ -4,6 +4,42 @@
 		"selected_items":
 		[
 			[
+				"Night",
+				"NightService"
+			],
+			[
+				"night",
+				"nightEnds"
+			],
+			[
+				"text",
+				"textColorNight"
+			],
+			[
+				"body",
+				"bodyBackground"
+			],
+			[
+				"si",
+				"siteBkg-day"
+			],
+			[
+				"ba",
+				"background-color"
+			],
+			[
+				"sit",
+				"siteBkg-laceSmall"
+			],
+			[
+				"s",
+				"siteBkg-laceLarge"
+			],
+			[
+				"con",
+				"content"
+			],
+			[
 				"folder",
 				"folder_exclude_patterns"
 			],
@@ -36,82 +72,26 @@
 	"buffers":
 	[
 		{
-			"file": "src/app.js",
+			"file": "src/app/frame/index.html",
 			"settings":
 			{
-				"buffer_size": 262,
+				"buffer_size": 419,
 				"line_ending": "Windows"
 			}
 		},
 		{
-			"file": "src/app/resume/resume_directive.js",
+			"file": "src/app/style/scss/modules/_footer-site.scss",
 			"settings":
 			{
-				"buffer_size": 260,
+				"buffer_size": 874,
 				"line_ending": "Windows"
 			}
 		},
 		{
-			"file": "src/app/resume/resume.md",
+			"file": "src/app/frame/index.js",
 			"settings":
 			{
-				"buffer_size": 3534,
-				"line_ending": "Windows"
-			}
-		},
-		{
-			"file": "src/app/resume/index.js",
-			"settings":
-			{
-				"buffer_size": 234,
-				"line_ending": "Windows"
-			}
-		},
-		{
-			"file": "src/app/resume/resume_controller.js",
-			"settings":
-			{
-				"buffer_size": 205,
-				"line_ending": "Windows"
-			}
-		},
-		{
-			"file": "src/app/app_router_config.js",
-			"settings":
-			{
-				"buffer_size": 1934,
-				"line_ending": "Windows"
-			}
-		},
-		{
-			"file": "src/app/frame/site-header/site-header.html",
-			"settings":
-			{
-				"buffer_size": 554,
-				"line_ending": "Windows"
-			}
-		},
-		{
-			"file": "webpack.config.js",
-			"settings":
-			{
-				"buffer_size": 1925,
-				"line_ending": "Windows"
-			}
-		},
-		{
-			"file": "package.json",
-			"settings":
-			{
-				"buffer_size": 1658,
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "src/app/frame/site-header/index.js",
-			"settings":
-			{
-				"buffer_size": 248,
+				"buffer_size": 131,
 				"line_ending": "Windows"
 			}
 		},
@@ -119,24 +99,56 @@
 			"file": "src/app/frame/site-header/site-header_controller.js",
 			"settings":
 			{
-				"buffer_size": 174,
+				"buffer_size": 330,
 				"line_ending": "Windows"
 			}
 		},
 		{
-			"file": "src/app/frame/site-header/site-header_directive.js",
+			"file": "src/app/style/scss/base/_typography.scss",
 			"settings":
 			{
-				"buffer_size": 264,
+				"buffer_size": 1625,
 				"line_ending": "Windows"
 			}
 		},
 		{
-			"file": "src/app/frame/index.html",
+			"file": "src/hello/hello_service.js",
 			"settings":
 			{
-				"buffer_size": 312,
+				"buffer_size": 244,
 				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "src/app/style/scss/modules/_header-site.scss",
+			"settings":
+			{
+				"buffer_size": 1746,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "src/app/frame/site-header/site-header.html",
+			"settings":
+			{
+				"buffer_size": 461,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "src/app/style/scss/base/_globals-laceTheme.scss",
+			"settings":
+			{
+				"buffer_size": 8077,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "node_modules/compass-mixins/lib/animation/_core.scss",
+			"settings":
+			{
+				"buffer_size": 7216,
+				"line_ending": "Unix"
 			}
 		}
 	],
@@ -184,40 +196,48 @@
 	},
 	"expanded_folders":
 	[
-		"/C/Users/ashle/Documents/Sites/high-enigma-angular",
-		"/C/Users/ashle/Documents/Sites/high-enigma-angular/dest",
-		"/C/Users/ashle/Documents/Sites/high-enigma-angular/src",
-		"/C/Users/ashle/Documents/Sites/high-enigma-angular/src/app",
-		"/C/Users/ashle/Documents/Sites/high-enigma-angular/src/app/about",
-		"/C/Users/ashle/Documents/Sites/high-enigma-angular/src/app/frame",
-		"/C/Users/ashle/Documents/Sites/high-enigma-angular/src/app/frame/site-header",
-		"/C/Users/ashle/Documents/Sites/high-enigma-angular/src/app/haml",
-		"/C/Users/ashle/Documents/Sites/high-enigma-angular/src/app/resume",
-		"/C/Users/ashle/Documents/Sites/high-enigma-angular/src/app/style",
-		"/C/Users/ashle/Documents/Sites/high-enigma-angular/src/app/style/scss/base",
-		"/C/Users/ashle/Documents/Sites/high-enigma-angular/src/app/style/scss/modules"
+		"/C/Users/ashle/Sites/high-enigma-angular"
 	],
 	"file_history":
 	[
+		"/C/Users/ashle/Documents/Sites/high-enigma-angular/src/app/style/scss/base/_normalize.scss",
+		"/C/Users/ashle/Documents/Sites/high-enigma-angular/src/app/style/scss/screen.scss",
+		"/C/Users/ashle/Documents/Sites/high-enigma-angular/src/app/style/scss/modules/_theme-background.scss",
+		"/C/Users/ashle/Documents/Sites/high-enigma-angular/src/app.js",
+		"/C/Users/ashle/Documents/Sites/high-enigma-angular/src/app/frame/site-header/index.js",
+		"/C/Users/ashle/Documents/Sites/high-enigma-angular/src/night/index.js",
 		"/C/Users/ashle/Documents/Sites/high-enigma-angular/src/index.html",
-		"/C/Users/ashle/Documents/Sites/high-enigma-angular/src/app/frame/index.html",
-		"/C/Users/ashle/Documents/Sites/high-enigma-angular/src/app/haml/haml.haml",
+		"/C/Users/ashle/Documents/Sites/high-enigma-angular/src/night/night_directive.js",
+		"/C/Users/ashle/Documents/Sites/high-enigma-angular/src/night/night_service.js",
 		"/C/Users/ashle/Documents/Sites/high-enigma-angular/webpack.config.js",
+		"/C/Users/ashle/Documents/Sites/high-enigma-angular/src/app/style/scss/base/_base.scss",
+		"/C/Users/ashle/Documents/Sites/high-enigma-angular/src/app/style/scss/base/_keyframes.scss",
+		"/C/Users/ashle/Documents/Sites/high-enigma-angular/high-enigma-angular.sublime-project",
+		"/C/Users/ashle/Documents/Sites/high-enigma-angular/src/app/style/scss/base/_grid.scss",
+		"/C/Users/ashle/Documents/Sites/high-enigma-angular/src/app/style/scss/base/_globals-laceTheme.scss",
+		"/C/Users/ashle/Documents/Sites/high-enigma-angular/src/app/style/images/alh-white.png",
+		"/C/Users/ashle/Documents/Sites/high-enigma-angular/src/app/frame/site-header/site-header.html",
+		"/C/Users/ashle/Documents/Sites/high-enigma-angular/src/app/app_router_config.js",
+		"/C/Users/ashle/Documents/Sites/high-enigma-angular/package.json",
+		"/C/Users/ashle/Documents/Sites/high-enigma-angular/src/app/frame/index.html",
+		"/C/Users/ashle/Documents/Sites/high-enigma-angular/src/app/resume/resume_directive.js",
+		"/C/Users/ashle/Documents/Sites/high-enigma-angular/src/app/resume/resume.md",
+		"/C/Users/ashle/Documents/Sites/high-enigma-angular/src/app/resume/index.js",
+		"/C/Users/ashle/Documents/Sites/high-enigma-angular/src/app/resume/resume_controller.js",
+		"/C/Users/ashle/Documents/Sites/high-enigma-angular/src/app/frame/site-header/site-header_controller.js",
+		"/C/Users/ashle/Documents/Sites/high-enigma-angular/src/app/frame/site-header/site-header_directive.js",
+		"/C/Users/ashle/AppData/Roaming/Sublime Text 3/Packages/Default/Preferences.sublime-settings",
+		"/C/Users/ashle/AppData/Roaming/Sublime Text 3/Packages/User/Default (Windows).sublime-keymap",
+		"/C/Users/ashle/AppData/Roaming/Sublime Text 3/Packages/Default/Default (Windows).sublime-keymap",
+		"/C/Users/ashle/Documents/Sites/high-enigma-angular/src/app/haml/haml.haml",
 		"/C/Users/ashle/Documents/Sites/high-enigma-angular/.babelrc",
 		"/C/Users/ashle/Documents/Sites/high-enigma-angular/dest/app.js",
-		"/C/Users/ashle/Documents/Sites/high-enigma-angular/package.json",
 		"/C/Users/ashle/Documents/Sites/high-enigma-angular/.npmrc",
 		"/C/Users/ashle/Documents/Sites/high-enigma-angular/dest/style.css",
 		"/C/Users/ashle/Documents/Sites/high-enigma-angular/.gitignore",
 		"/C/Users/ashle/Documents/Sites/angular-webpack/package.json",
 		"/C/Users/ashle/Documents/Sites/webpack-angular-es2015-master/README.md",
-		"/C/Users/ashle/Documents/Sites/high-enigma-angular/src/app/style/scss/screen.scss",
-		"/C/Users/ashle/Documents/Sites/high-enigma-angular/src/app/app_router_config.js",
-		"/C/Users/ashle/Documents/Sites/high-enigma-angular/src/app.js",
 		"/C/Users/ashle/Documents/Sites/high-enigma-angular/src/../.babelrc",
-		"/C/Users/ashle/Documents/Sites/high-enigma-angular/high-enigma-angular.sublime-project",
-		"/C/Users/ashle/Documents/Sites/high-enigma-angular/src/app/style/scss/base/_base.scss",
-		"/C/Users/ashle/Documents/Sites/high-enigma-angular/src/app/style/scss/modules/_theme-background.scss",
 		"/C/Users/ashle/Documents/Sites/high-enigma-angular/src/.eslintrc",
 		"/C/Users/ashle/Documents/Sites/high-enigma-angular/LICENSE.md",
 		"/C/Users/ashle/Documents/Sites/high-enigma-angular/index.js",
@@ -261,6 +281,20 @@
 		"case_sensitive": true,
 		"find_history":
 		[
+			"haml",
+			"helloService",
+			"Hello",
+			"this",
+			"HelloSe",
+			"hello",
+			".5",
+			"255, 255, 255",
+			"$white",
+			"255, 255, 255",
+			" url('./../images/bkg-lace-small-5.png')",
+			"'../images/bkg-lace-big-100.png'",
+			"'app",
+			"app",
 			"home",
 			"About",
 			"about",
@@ -308,80 +342,24 @@
 	"groups":
 	[
 		{
-			"selected": 8,
+			"selected": 3,
 			"sheets":
 			[
 				{
 					"buffer": 0,
-					"file": "src/app.js",
+					"file": "src/app/frame/index.html",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 262,
+						"buffer_size": 419,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								92,
-								92
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/JavaScript/JavaScript.sublime-syntax"
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 8,
-					"type": "text"
-				},
-				{
-					"buffer": 1,
-					"file": "src/app/resume/resume_directive.js",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 260,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								259,
-								259
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/JavaScript/JavaScript.sublime-syntax"
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 3,
-					"type": "text"
-				},
-				{
-					"buffer": 2,
-					"file": "src/app/resume/resume.md",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 3534,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								222,
-								222
+								240,
+								240
 							]
 						],
 						"settings":
@@ -392,24 +370,54 @@
 						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 5,
+					"stack_index": 8,
 					"type": "text"
 				},
 				{
-					"buffer": 3,
-					"file": "src/app/resume/index.js",
+					"buffer": 1,
+					"file": "src/app/style/scss/modules/_footer-site.scss",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 234,
+						"buffer_size": 874,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								102,
-								102
+								701,
+								701
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/SCSS/SCSS.tmLanguage",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 5,
+					"type": "text"
+				},
+				{
+					"buffer": 2,
+					"file": "src/app/frame/index.js",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 131,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								104,
+								104
 							]
 						],
 						"settings":
@@ -420,24 +428,82 @@
 						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 4,
+					"stack_index": 1,
 					"type": "text"
 				},
 				{
-					"buffer": 4,
-					"file": "src/app/resume/resume_controller.js",
+					"buffer": 3,
+					"file": "src/app/frame/site-header/site-header_controller.js",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 205,
+						"buffer_size": 330,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								205,
-								205
+								165,
+								165
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/JavaScript/JavaScript.sublime-syntax"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 0,
+					"type": "text"
+				},
+				{
+					"buffer": 4,
+					"file": "src/app/style/scss/base/_typography.scss",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 1625,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								1625,
+								1625
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/SCSS/SCSS.tmLanguage",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 2489.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 3,
+					"type": "text"
+				},
+				{
+					"buffer": 5,
+					"file": "src/hello/hello_service.js",
+					"semi_transient": true,
+					"settings":
+					{
+						"buffer_size": 244,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								0,
+								0
 							]
 						],
 						"settings":
@@ -452,241 +518,129 @@
 					"type": "text"
 				},
 				{
-					"buffer": 5,
-					"file": "src/app/app_router_config.js",
+					"buffer": 6,
+					"file": "src/app/style/scss/modules/_header-site.scss",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 1934,
+						"buffer_size": 1746,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								806,
-								806
+								881,
+								881
 							]
 						],
 						"settings":
 						{
-							"syntax": "Packages/JavaScript/JavaScript.sublime-syntax",
+							"syntax": "Packages/SCSS/SCSS.tmLanguage",
 							"tab_size": 2,
 							"translate_tabs_to_spaces": true
 						},
 						"translation.x": 0.0,
-						"translation.y": 343.0,
+						"translation.y": 323.0,
 						"zoom_level": 1.0
 					},
 					"stack_index": 6,
 					"type": "text"
 				},
 				{
-					"buffer": 6,
+					"buffer": 7,
 					"file": "src/app/frame/site-header/site-header.html",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 554,
+						"buffer_size": 461,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								362,
-								362
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/HTML/HTML.sublime-syntax"
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 7,
-					"type": "text"
-				},
-				{
-					"buffer": 7,
-					"file": "webpack.config.js",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 1925,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								1433,
-								1433
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/JavaScript/JavaScript.sublime-syntax",
-							"tab_size": 2,
-							"translate_tabs_to_spaces": true
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 1,
-					"type": "text"
-				},
-				{
-					"buffer": 8,
-					"file": "package.json",
-					"semi_transient": true,
-					"settings":
-					{
-						"buffer_size": 1658,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								0,
-								0
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/JavaScript/JSON.sublime-syntax",
-							"tab_size": 2,
-							"translate_tabs_to_spaces": true
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 0,
-					"type": "text"
-				},
-				{
-					"buffer": 9,
-					"file": "src/app/frame/site-header/index.js",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 248,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								248,
-								248
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/JavaScript/JavaScript.sublime-syntax"
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 9,
-					"type": "text"
-				},
-				{
-					"buffer": 10,
-					"file": "src/app/frame/site-header/site-header_controller.js",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 174,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								174,
-								174
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/JavaScript/JavaScript.sublime-syntax"
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 11,
-					"type": "text"
-				},
-				{
-					"buffer": 11,
-					"file": "src/app/frame/site-header/site-header_directive.js",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 264,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								81,
-								81
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/JavaScript/JavaScript.sublime-syntax"
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 10,
-					"type": "text"
-				},
-				{
-					"buffer": 12,
-					"file": "src/app/frame/index.html",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 312,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								54,
-								54
+								461,
+								461
 							]
 						],
 						"settings":
 						{
 							"syntax": "Packages/HTML/HTML.sublime-syntax",
-							"translate_tabs_to_spaces": false
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
 						},
 						"translation.x": 0.0,
 						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 12,
+					"stack_index": 4,
+					"type": "text"
+				},
+				{
+					"buffer": 8,
+					"file": "src/app/style/scss/base/_globals-laceTheme.scss",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 8077,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								2193,
+								2193
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/SCSS/SCSS.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 1185.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 7,
 					"type": "text"
 				}
 			]
 		},
 		{
+			"selected": 0,
 			"sheets":
 			[
+				{
+					"buffer": 9,
+					"file": "node_modules/compass-mixins/lib/animation/_core.scss",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 7216,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								7216,
+								7216
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/SCSS/SCSS.tmLanguage",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 2920.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 9,
+					"type": "text"
+				}
 			]
 		}
 	],
@@ -718,7 +672,7 @@
 		"cols":
 		[
 			0.0,
-			0.664467483506,
+			0.814587973274,
 			1.0
 		],
 		"rows":
@@ -782,7 +736,7 @@
 	"show_open_files": false,
 	"show_tabs": true,
 	"side_bar_visible": true,
-	"side_bar_width": 614.0,
+	"side_bar_width": 595.0,
 	"status_bar_visible": true,
 	"template_settings":
 	{

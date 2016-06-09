@@ -4,7 +4,8 @@ const siteHeader = function () {
   	replace: true,
     controller: 'siteHeaderController',
     controllerAs: 'controller',
-    template: require('./site-header.html')
+    template: require('./site-header.html'),
+    scope: {}
   };
 };
 

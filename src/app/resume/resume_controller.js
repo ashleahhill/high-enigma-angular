@@ -1,9 +1,6 @@
-const $inject = ['BlahService'];
-const ResumeController = function (blahService) {
-  this.name = 'Resume: ' + blahService.blah();
+const ResumeController = function () {
 };
 
-ResumeController.$inject = $inject;
 
 export default ResumeController;
 

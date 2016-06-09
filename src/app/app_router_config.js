@@ -34,17 +34,6 @@ export default app => {
                 template: require('./frame/index.html')
             })
 
-        .state({
-          name: 'me.test',
-          parent: 'me',
-          url: '/test',
-          views: {
-            content: {
-              template: '<div>test</div>'
-            }
-          }
-        })
-
         .state(route('home', callback =>
             require.ensure([], () =>
                 callback(app.register(require('./home').name)))))
@@ -53,13 +42,13 @@ export default app => {
             require.ensure([], () =>
                 callback(app.register(require('./resume').name)))))
 
-        .state(route('about', callback =>
+        .state(route('stuff', callback =>
             require.ensure([], () =>
-                callback(app.register(require('./about').name)))))
+                callback(app.register(require('./stuff').name)))))
 
-        .state(route('haml', callback =>
+        .state(route('credits', callback =>
             require.ensure([], () =>
-                callback(app.register(require('./haml').name)))));
+                callback(app.register(require('./credits').name)))))
 
         // For any unmatched url, redirect to /state1
         $urlRouterProvider.otherwise('/home');
