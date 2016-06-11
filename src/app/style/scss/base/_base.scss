@@ -4,11 +4,13 @@
 @import "~compass-mixins/lib/compass/css3";
 @import "~compass-mixins/lib/animation/core";
 
-// custom mixins
-@import "utilities";
 
 // web fonts
 @import "fonts";
+
+// custom mixins
+@import "utilities";
+
 
 // variables
 @import "globals-frankenstein"; // standard for greyboxing from frakenstein repo

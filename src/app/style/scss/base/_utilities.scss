@@ -7,13 +7,24 @@
 		clear:both;
 	}
 }
-%icon-offsiteArrow{
+
+%icon-offsiteArrow,
+%icon-leaf,
+%icon-day,
+%icon-night {
 	font-family: 'entypo-icons', wingdings;
+}
+%icon-offsiteArrow{
     content:'3';
 }
 %icon-leaf{
-	font-family: 'entypo-icons', wingdings;
 	content:'G';
+}
+%icon-day {
+    content: $icon-sun;
+}
+%icon-night {
+	content: $icon-moon;
 }
 
 @mixin border($width:1px, $style:unquote('solid'), $color:'$grey'){

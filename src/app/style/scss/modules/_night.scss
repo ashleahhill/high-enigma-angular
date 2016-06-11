@@ -1,0 +1,35 @@
+/**
+ * Night
+ * Switches from day to night
+ */
+
+.night-toggle {
+	height: 30px;
+	width: 30px;
+	position: fixed;
+	left: 10px;
+	top: 50%;
+	@include transform(translate-x(-50%));
+	box-shadow: 3px 3px 5px rgba(#000, 0.5);
+	border-radius: 100%;
+	background-color: $bodyBackground;
+	@include transition(background-color 1s);
+
+	&::before {
+		@extend %icon-night;
+		color: $textColor;
+		@include transition(color 1s);
+		position: absolute;
+		top: 50%;
+		left: 50%;
+		@include transform(translate(-50%, -50%));
+	}
+	&.is-night {
+		background-color: $bodyBackgroundNight;
+		&::before {
+			@extend %icon-day;
+			color: $textColorNight;
+		}
+	}
+
+}

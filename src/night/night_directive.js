@@ -1,18 +1,25 @@
-const $inject = ['NightService'];
-const Night = function (NightService) {
+const $inject = ['$rootScope', 'NightService'];
+const Night = function ($rootScope, NightService) {
   const link = ($scope, el) => {
 
-    if (NightService.isNight()) {
-    	el.removeClass('is-night').addClass('is-night');
-    } else {
-    	el.removeClass('is-night');
+    function toggleClass (val) {
+      console.log(val);
+      if (val) {
+        el.removeClass('is-night').addClass('is-night');
+      } else {
+        el.removeClass('is-night');
+      }
+
     }
+ 
+    $rootScope.$watch('night.isNight', toggleClass);
 
   };
 
   return {
     restrict: 'A',
-    link
+    link: link,
+    controller: 'NightController'
   };
 };
 
