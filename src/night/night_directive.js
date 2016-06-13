@@ -3,7 +3,6 @@ const Night = function ($rootScope, NightService) {
   const link = ($scope, el) => {
 
     function toggleClass (val) {
-      console.log(val);
       if (val) {
         el.removeClass('is-night').addClass('is-night');
       } else {

@@ -50,7 +50,7 @@ export default app => {
             require.ensure([], () =>
                 callback(app.register(require('./credits').name)))))
 
-        // For any unmatched url, redirect to /state1
+        // For any unmatched url, redirect to /home
         $urlRouterProvider.otherwise('/home');
     };
 

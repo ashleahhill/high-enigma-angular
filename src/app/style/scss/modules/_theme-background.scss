@@ -4,22 +4,70 @@
 
 $siteBkg-laceSmall: './../images/bkg-lace-small-5.png';
 $siteBkg-laceLarge: './../images/bkg-lace-big-100.png';
+$siteBkg-gradientPosition: 58px 50px; 
+
+// node compass mixins background image has a bug
 
 body {
-    background-image: url($siteBkg-laceSmall), -webkit-gradient(radial, 50px 50px, 0, 50px 50px, 80, color-stop(0%, $bodyBackground), color-stop(10%, $bodyBackground), color-stop(30%, rgba(255, 255, 255, 0.95)), color-stop(80%, rgba(255, 255, 255, 0.98))), url($siteBkg-laceLarge);
-    background-image: url($siteBkg-laceSmall), -webkit-radial-gradient(50px 50px, circle cover, $bodyBackground 0%, $bodyBackground 10%, rgba(255, 255, 255, 0.95) 30%, rgba(255, 255, 255, 0.98) 80%), url($siteBkg-laceLarge);
-    background-image: url($siteBkg-laceSmall), -moz-radial-gradient(50px 50px, circle cover, $bodyBackground 0%, $bodyBackground 10%, rgba(255, 255, 255, 0.95) 30%, rgba(255, 255, 255, 0.98) 80%), url($siteBkg-laceLarge);
-    background-image: url($siteBkg-laceSmall), -o-radial-gradient(50px 50px, circle cover, $bodyBackground 0%, $bodyBackground 10%, rgba(255, 255, 255, 0.95) 30%, rgba(255, 255, 255, 0.98) 80%), url($siteBkg-laceLarge);
-    background-image: url($siteBkg-laceSmall), radial-gradient(50px 50px, circle cover, $bodyBackground 0%, $bodyBackground 10%, rgba(255, 255, 255, 0.95) 30%, rgba(255, 255, 255, 0.98) 80%), url($siteBkg-laceLarge);
-    -webkit-background-size: auto, 430px 430px, auto;
-    -moz-background-size: auto, 430px 430px, auto;
-    -o-background-size: auto, 430px 430px, auto;
-    background-size: auto, 430px 430px, auto;
+    background-image: url($siteBkg-laceSmall), 
+        -webkit-gradient(radial, 50px 50px, 0, 50px 50px, 80, 
+            color-stop(0%, rgba($bodyBackground, 0.98)), 
+            color-stop(10%, rgba($bodyBackground, 0.98)), 
+            color-stop(30%, rgba($bodyBackground, 0.90)), 
+            color-stop(80%, rgba($bodyBackground, 0.92)), 
+            color-stop(100%, rgba($bodyBackground, 0))), 
+        url($siteBkg-laceLarge);
+    background-image: url($siteBkg-laceSmall), 
+        -webkit-radial-gradient(
+            $siteBkg-gradientPosition, 
+            circle farthest-side, 
+            rgba($bodyBackground, 0.98) 0%, 
+            rgba($bodyBackground, 0.98) 10%, 
+            rgba($bodyBackground, 0.90) 30%, 
+            rgba($bodyBackground, 0.92) 80%,
+            rgba($bodyBackground, 0) 100%
+        ), 
+        url($siteBkg-laceLarge);
+    background-image: url($siteBkg-laceSmall), 
+        -moz-radial-gradient(
+            $siteBkg-gradientPosition, 
+            circle farthest-side, 
+            rgba($bodyBackground, 0.98) 0%, 
+            rgba($bodyBackground, 0.98) 10%, 
+            rgba($bodyBackground, 0.90) 30%, 
+            rgba($bodyBackground, 0.92) 80%,
+            rgba($bodyBackground, 0) 100%
+        ), 
+        url($siteBkg-laceLarge);
+    background-image: url($siteBkg-laceSmall), 
+        -o-radial-gradient(
+            $siteBkg-gradientPosition, 
+            circle farthest-side, 
+            rgba($bodyBackground, 0.98) 0%, 
+            rgba($bodyBackground, 0.98) 10%, 
+            rgba($bodyBackground, 0.90) 30%, 
+            rgba($bodyBackground, 0.92) 80%,
+            rgba($bodyBackground, 0) 100%
+        ), 
+        url($siteBkg-laceLarge);
+    background-image: url($siteBkg-laceSmall), 
+        radial-gradient(
+            $siteBkg-gradientPosition, 
+            circle farthest-side, 
+            rgba($bodyBackground, 0.98) 0%, 
+            rgba($bodyBackground, 0.98) 10%, 
+            rgba($bodyBackground, 0.90) 30%, 
+            rgba($bodyBackground, 0.92) 80%,
+            rgba($bodyBackground, 0) 100%
+        ), 
+        url($siteBkg-laceLarge);
+  
+    background-size: auto, 500px 500px, auto;
     background-position: bottom right, 0 0, -280px -280px;
     background-repeat: no-repeat, no-repeat, no-repeat;
     background-attachment: fixed, scroll, scroll;
     background-color: $bodyBackground;
-    @include transition(background-color 1s ease-out);
+    @include transition(background-color 1s ease-out, background-image 1s ease-out);
     &::before {
         content: '';
         z-index: -1;
@@ -37,11 +85,59 @@ body {
 }
 
 body.is-night {
-    background-image: url($siteBkg-laceSmall), -webkit-gradient(radial, 50px 50px, 0, 50px 50px, 80, color-stop(0%, $bodyBackgroundNight), color-stop(10%, $bodyBackgroundNight), color-stop(30%, rgba($bodyBackgroundNight, 0.95)), color-stop(80%, rgba($bodyBackgroundNight, 0.98))), url($siteBkg-laceLarge);
-    background-image: url($siteBkg-laceSmall), -webkit-radial-gradient(50px 50px, circle cover, $bodyBackgroundNight 0%, $bodyBackgroundNight 10%, rgba($bodyBackgroundNight, 0.95) 30%, rgba($bodyBackgroundNight, 0.98) 80%), url($siteBkg-laceLarge);
-    background-image: url($siteBkg-laceSmall), -moz-radial-gradient(50px 50px, circle cover, $bodyBackgroundNight 0%, $bodyBackgroundNight 10%, rgba($bodyBackgroundNight, 0.95) 30%, rgba($bodyBackgroundNight, 0.98) 80%), url($siteBkg-laceLarge);
-    background-image: url($siteBkg-laceSmall), -o-radial-gradient(50px 50px, circle cover, $bodyBackgroundNight 0%, $bodyBackgroundNight 10%, rgba($bodyBackgroundNight, 0.95) 30%, rgba($bodyBackgroundNight, 0.98) 80%), url($siteBkg-laceLarge);
-    background-image: url($siteBkg-laceSmall), radial-gradient(50px 50px, circle cover, $bodyBackgroundNight 0%, $bodyBackgroundNight 10%, rgba($bodyBackgroundNight, 0.95) 30%, rgba($bodyBackgroundNight, 0.98) 80%), url($siteBkg-laceLarge);
+    background-image: url($siteBkg-laceSmall), 
+        -webkit-gradient(radial, 58px 50px, 0, 58px 50px, 80, 
+            color-stop(0%, rgba($bodyBackgroundNight, 0.98)), 
+            color-stop(10%, rgba($bodyBackgroundNight, 0.98)), 
+            color-stop(30%, rgba($bodyBackgroundNight, 0.90)), 
+            color-stop(80%, rgba($bodyBackgroundNight, 0.92)), 
+            color-stop(100%, rgba($bodyBackgroundNight, 0))), 
+        url($siteBkg-laceLarge);
+    background-image: url($siteBkg-laceSmall), 
+        -webkit-radial-gradient(
+            $siteBkg-gradientPosition, 
+            circle farthest-side, 
+            rgba($bodyBackgroundNight, 0.98) 0%, 
+            rgba($bodyBackgroundNight, 0.98) 10%, 
+            rgba($bodyBackgroundNight, 0.90) 30%, 
+            rgba($bodyBackgroundNight, 0.92) 80%,
+            rgba($bodyBackgroundNight, 0) 100%
+        ), 
+        url($siteBkg-laceLarge);
+    background-image: url($siteBkg-laceSmall), 
+        -moz-radial-gradient(
+            $siteBkg-gradientPosition, 
+            circle farthest-side, 
+            rgba($bodyBackgroundNight, 0.98) 0%, 
+            rgba($bodyBackgroundNight, 0.98) 10%, 
+            rgba($bodyBackgroundNight, 0.90) 30%, 
+            rgba($bodyBackgroundNight, 0.92) 80%,
+            rgba($bodyBackgroundNight, 0) 100%
+        ), 
+        url($siteBkg-laceLarge);
+    background-image: url($siteBkg-laceSmall), 
+        -o-radial-gradient(
+            $siteBkg-gradientPosition, 
+            circle farthest-side, 
+            rgba($bodyBackgroundNight, 0.98) 0%, 
+            rgba($bodyBackgroundNight, 0.98) 10%, 
+            rgba($bodyBackgroundNight, 0.90) 30%, 
+            rgba($bodyBackgroundNight, 0.92) 80%,
+            rgba($bodyBackgroundNight, 0) 100%
+        ), 
+        url($siteBkg-laceLarge);
+    background-image: url($siteBkg-laceSmall), 
+        radial-gradient(
+            $siteBkg-gradientPosition, 
+            circle farthest-side, 
+            rgba($bodyBackgroundNight, 0.98) 0%, 
+            rgba($bodyBackgroundNight, 0.98) 10%, 
+            rgba($bodyBackgroundNight, 0.90) 30%, 
+            rgba($bodyBackgroundNight, 0.92) 80%,
+            rgba($bodyBackgroundNight, 0) 100%
+        ), 
+        url($siteBkg-laceLarge);
+  
     background-color: $bodyBackgroundNight;
     &::before {
         opacity: .025;

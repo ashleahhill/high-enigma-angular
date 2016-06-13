@@ -15,9 +15,10 @@
 @import "modules/footer-site";
 @import "modules/theme-background";
 @import "modules/night";
+@import "modules/circle";
 
 
-@media all and (max-width: 500px){
+@media all and (max-width: $breakpoint-medium){
 	
 	.page-wrapper{
 		margin-top: 1rem;
