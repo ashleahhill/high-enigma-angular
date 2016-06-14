@@ -1,10 +1,12 @@
 var path = require('path');
 var ExtractTextPlugin = require('extract-text-webpack-plugin');
 var HtmlWebpackPlugin = require('html-webpack-plugin');
+var webpack = require('webpack');
 
 module.exports = {
     entry: {
         app: [
+        // TODO: Upgrade to angular 1.5
             './vendor/angular.src.js',
             './node_modules/angular-ui-router/release/angular-ui-router.js',
             './src/app.js'
@@ -45,7 +47,7 @@ module.exports = {
             { test: /\.js$/, loader: 'eslint', include: path.resolve('src') }
         ],
         noParse: [
-            /angular\.src\.js/,
+            /angular\.js/,
             /angular\-ui\-router\.js/
         ]
     },
@@ -54,6 +56,10 @@ module.exports = {
         new HtmlWebpackPlugin({
             template: path.resolve('src', 'index.html'),
             inject: 'body'
+        }),
+        new webpack.DefinePlugin({
+          ENVIRONMENT: JSON.stringify(process.env.NODE_ENV || 'development'),
+          VERSION: JSON.stringify(require('./package.json').version)
         })
     ],
     devtool: 'eval-source-map',

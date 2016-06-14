@@ -18,7 +18,8 @@ a {
   &:hover{
     border-bottom-style: dotted; 
   }
-  &[href*='http://']:after{
+  &[href^='http://']:after,
+  &[href^='https://']:after {
     @extend %icon-offsiteArrow;
     display: inline-block;
     border-bottom:0;
