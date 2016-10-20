@@ -6,7 +6,7 @@
 
 @font-face {
   font-family: 'entypo-icons';
-  src: font-url("entypo-icons.eot");
+  src: font-url("./../fonts/entypo-icons.eot");
 }
 
 @font-face {
@@ -23,14 +23,16 @@ footer:after {
   clear: both;
 }
 
-a[href*='http://']:after,
+a[href^='http://']:after,
+a[href^='https://']:after,
 ul > li:before,
 .night-toggle.is-night::before,
 .night-toggle::before {
   font-family: 'entypo-icons', wingdings;
 }
 
-a[href*='http://']:after {
+a[href^='http://']:after,
+a[href^='https://']:after {
   content: '3';
 }
 
@@ -473,7 +475,8 @@ a:hover {
   border-bottom-style: dotted;
 }
 
-a[href*='http://']:after {
+a[href^='http://']:after,
+a[href^='https://']:after {
   display: inline-block;
   border-bottom: 0;
   margin-left: .2em;
@@ -1317,6 +1320,7 @@ body.is-night::before {
   .page-wrapper::before {
     content: '';
     position: absolute;
+    z-index: -1;
     top: 0;
     left: 0;
     height: 100%;
@@ -1373,3 +1377,5 @@ body.is-night::before {
   }
 }
 
+
+/*# sourceMappingURL=style.css.map*/
