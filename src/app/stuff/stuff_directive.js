@@ -1,9 +1,8 @@
 const $inject = [];
 const stuff = function () {
-
   return {
-  	replace: true,
-    controller: () => {},
+    replace: true,
+    controller: () => { },
     controllerAs: 'controller',
     template: require('./stuff.html')
   };
