@@ -1,7 +1,7 @@
 /* global ENVIRONMENT */
 const route = (entry, resolve) => ({
 
-    // name: entry,
+  // name: entry,
   name: 'me.' + entry,
   url: '/' + entry,
   parent: 'me',
@@ -65,8 +65,8 @@ export default app => {
     '$windowProvider'
   ];
 
-    // We have to use hardcoded
-    //  value for 'require' so it can be statically built
+  // We have to use hardcoded
+  //  value for 'require' so it can be statically built
   const RouterConfig = function (
     $locationProvider,
     $stateProvider,
@@ -77,37 +77,37 @@ export default app => {
     if (ENVIRONMENT !== 'static') {
       $locationProvider.html5Mode(true).hashPrefix('!');
     } else {
-            // for github.io page
+      // for github.io page
 
       $locationProvider.html5Mode(false)
-                .hashPrefix('!');
+        .hashPrefix('!');
       decorateStaticAnchors($provide, $windowProvider);
     }
 
     $stateProvider
-            .state({
-              name: 'me',
-              abstract: true,
-              template: require('./frame/index.html')
-            })
+      .state({
+        name: 'me',
+        abstract: true,
+        template: require('./frame/index.html')
+      })
 
-        .state(route('home', callback =>
-            require.ensure([], () =>
-                callback(app.register(require('./home').name)))))
+      .state(route('home', callback =>
+        require.ensure([], () =>
+          callback(app.register(require('./home').default.name)))))
 
-        .state(route('resume', callback =>
-            require.ensure([], () =>
-                callback(app.register(require('./resume').name)))))
+      .state(route('resume', callback =>
+        require.ensure([], () =>
+          callback(app.register(require('./resume').default.name)))))
 
-        .state(route('stuff', callback =>
-            require.ensure([], () =>
-                callback(app.register(require('./stuff').name)))))
+      .state(route('stuff', callback =>
+        require.ensure([], () =>
+          callback(app.register(require('./stuff').default.name)))))
 
-        .state(route('credits', callback =>
-            require.ensure([], () =>
-                callback(app.register(require('./credits').name)))));
+      .state(route('credits', callback =>
+        require.ensure([], () =>
+          callback(app.register(require('./credits').default.name)))));
 
-        // For any unmatched url, redirect to /home
+    // For any unmatched url, redirect to /home
     $urlRouterProvider.otherwise('/home');
   };
 

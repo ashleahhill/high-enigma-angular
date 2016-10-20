@@ -1,11 +1,14 @@
 require('./app/style/scss/screen.scss');
 
+import routerConfig from './app/app_router_config';
+import appFrame from './app/frame';
+
 const app = angular.module('app', [
   'ui.router',
-  require('./app/frame').name
+  appFrame.name
 ]);
 
-app.config(require('./app/app_router_config')(app));
+app.config(routerConfig(app));
 
 app.run(['$injector', ($injector) => {
   app.register = $injector.loadModule.bind($injector);

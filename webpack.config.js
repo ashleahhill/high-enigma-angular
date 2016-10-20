@@ -7,7 +7,7 @@ module.exports = {
   entry: {
     app: [
 
-        // TODO: Upgrade to angular 1.5
+      // TODO: Upgrade to angular 1.5
       './vendor/angular.src.js',
       './node_modules/angular-ui-router/release/angular-ui-router.js',
       './src/app.js'
@@ -25,27 +25,27 @@ module.exports = {
         include: path.resolve(__dirname, './src/'),
         loader: 'babel-loader'
       },
-            {test: /\.md$/, loader: 'html!markdown'},
-            {test: /\.css$/, loader: ExtractTextPlugin.extract('style', 'css?sourceMap')},
+      {test: /\.md$/, loader: 'html!markdown'},
+      {test: /\.css$/, loader: ExtractTextPlugin.extract('style', 'css?sourceMap')},
       {
         test: /\.sass$/,
         loader: ExtractTextPlugin
-                    .extract(
-                        'style',
-                        'css?sourceMap!sass?sourceMap&indentedSyntax=true')
+          .extract(
+          'style',
+          'css?sourceMap!sass?sourceMap&indentedSyntax=true')
       },
       {
         test: /\.scss$/,
         loader: ExtractTextPlugin.extract(
-                    'style',
-                    'css?sourceMap!resolve-url!sass?sourceMap')
+          'style',
+          'css?sourceMap!resolve-url!sass?sourceMap')
       },
-            {test: /\.(png|jpg)$/, loader: 'url?limit=32768'},
-            {test: /\.html$/, loader: 'ng-cache?prefix=[dir]/[dir]'},
-            {test: /\.haml$/, loader: 'hamlc-loader'}
+      {test: /\.(png|jpg)$/, loader: 'url?limit=32768'},
+      {test: /\.html$/, loader: 'ng-cache?prefix=[dir]/[dir]'},
+      {test: /\.haml$/, loader: 'hamlc-loader'}
     ],
     preLoaders: [
-            {test: /\.js$/, loader: 'eslint', include: path.resolve('src')}
+      {test: /\.js$/, loader: 'eslint', include: path.resolve('src')}
     ],
     noParse: [
       /angular\.js/,
@@ -55,7 +55,7 @@ module.exports = {
   plugins: [
     new ExtractTextPlugin('style.css', {allChunks: true}),
     new HtmlWebpackPlugin({
-      template: path.resolve('src', 'index.html'),
+      template: path.resolve('src', 'index.ejs'),
       inject: 'body'
     }),
     new webpack.DefinePlugin({
@@ -63,7 +63,7 @@ module.exports = {
       VERSION: JSON.stringify(require('./package.json').version)
     })
   ],
-  devtool: 'eval-source-map',
+  devtool: 'cheap-module-source-map',
   devServer: {
     historyApiFallback: true,
     stats: {

@@ -1,4 +1,9 @@
-// @ngdoc directive
+import service from './night_service';
+import controller from './night_controller';
+import nightDirective from './night_directive';
+import nightToggle from './night-toggle_directive';
+
+// @ngdoc module
 // @name night
 // @description
 // add class if it is night
@@ -6,9 +11,9 @@
 const night = angular.module('night', []);
 
 night
-  .service('NightService', require('./night_service'))
-  .controller('NightController', require('./night_controller'))
-  .directive('night', require('./night_directive'))
-  .directive('nightToggle', require('./night-toggle_directive'));
+  .service('NightService', service)
+  .controller('NightController', controller)
+  .directive('night', nightDirective)
+  .directive('nightToggle', nightToggle);
 
-module.exports = night;
+export default night;
