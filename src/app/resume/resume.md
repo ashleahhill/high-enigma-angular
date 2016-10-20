@@ -1,17 +1,30 @@
 ## Skills
 
+* JavaScript ~ 14 years (3 server-side/SPA)
 * AngularJS ~ 2 years
-* HTML ~ 15 years
-* CSS ~ 15 years
+* Angular2 ~ 3 months
+* TypeScript ~ 3 months
 * SASS ~ 4 years
 * Node.js ~ 2 years
 * Grunt ~ 4 years
-* JavaScript ~ 14 years (3 server-side/SPA)
+* HTML ~ 15 years
+* CSS ~ 15 years
 * PHP ~ 2 years
+* React ~ 1 week
 
 Also proficient in Illustrator, Photoshop, and InDesign; but if you ask me to use Dreamweaver again, I may cry.
 
 ## Experience
+
+### Front End Web Developer III —2016 — Q-Free Open Roads 
+
+* Developed Angular 2 components and services for Transportation Management System Software UI of high quality and interoperablity with popluar 3rd party open source frameworks
+* Unit Testing using Karma and Jasmine
+* Developed API development server in Node.js
+* Expanded Yeoman generator suite for internal use
+* Wrote in TypeScript, JavaScript, and SCSS
+* Contract Position
+
 
 ### Software Architect —2016 — Homes.com
 
