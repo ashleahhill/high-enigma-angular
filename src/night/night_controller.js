@@ -1,9 +1,7 @@
 const $inject = ['$scope', 'NightService'];
 
-const NightController = function ($scope, NightService)  {
-
-    $scope.isNight =  NightService.isNight();
-    
+const NightController = function ($scope, NightService) {
+  $scope.isNight = NightService.isNight();
 };
 
 NightController.$inject = $inject;

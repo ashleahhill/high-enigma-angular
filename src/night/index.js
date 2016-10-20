@@ -1,6 +1,6 @@
 // @ngdoc directive
 // @name night
-// @description 
+// @description
 // add class if it is night
 
 const night = angular.module('night', []);

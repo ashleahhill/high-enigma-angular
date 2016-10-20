@@ -1,9 +1,8 @@
 const $inject = [];
 const circle = function () {
-
   return {
-  	replace: true,
-    controller: () => {},
+    replace: true,
+    controller: () => { },
     controllerAs: 'controller',
     template: require('./circle.html')
   };

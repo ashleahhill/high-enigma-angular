@@ -1,6 +1,6 @@
 const siteHeader = angular.module('app.frame.siteHeader', [
-'ui.router'
-	]);
+  'ui.router'
+]);
 
 siteHeader.directive('navItem', require('./nav-item_directive'));
 siteHeader.service('NavItems', require('./nav-items_service'));

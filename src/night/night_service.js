@@ -4,33 +4,31 @@
 // Determine if it is night
 const $inject = ['$rootScope'];
 
-const NightService = function($rootScope) {
-    var self = this;
-    self.nightBegins = 17;
-    self.nightEnds = 7;
+const NightService = function ($rootScope) {
+  const self = this;
 
-    $rootScope.night = {};
+  self.nightBegins = 17;
+  self.nightEnds = 7;
 
-    self.isNight = function isNight() {
-        var now = new Date().getHours();
+  $rootScope.night = {};
 
-        if (self.nightOverride === undefined) {
-        	$rootScope.night.isNight = (now >= self.nightEnds && now < self.nightBegins) ? false : true;
+  self.isNight = function isNight() {
+    const now = new Date().getHours();
 
-        	return $rootScope.night.isNight;
-        } else {
-        	return $rootScope.night.isNight;
-        }
+    if (self.nightOverride === undefined) {
+      $rootScope.night.isNight = !(now >= self.nightEnds && now < self.nightBegins);
 
-    };
-
-    self.toggleNight = function toggleNight() {
-    	self.nightOverride = $rootScope.night.isNight = !$rootScope.night.isNight;
-
-    	$rootScope.$apply(); // udpdate ze directives
+      return $rootScope.night.isNight;
     }
 
+    return $rootScope.night.isNight;
+  };
 
+  self.toggleNight = function toggleNight() {
+    self.nightOverride = $rootScope.night.isNight = !$rootScope.night.isNight;
+
+    $rootScope.$apply(); // udpdate ze directives
+  };
 };
 
 NightService.$inject = $inject;

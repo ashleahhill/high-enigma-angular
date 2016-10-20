@@ -9,17 +9,13 @@ const $inject = ['$scope', '$state', 'NavItems'];
  * Bind nav items and current state
  */
 const SiteHeaderController = function ($scope, $state, NavItems) {
-
-
   this.items = NavItems.items;
 
   this.setActive = (event, newState) => {
-  	this.state = newState.url;
-
+    this.state = newState.url;
   };
-  
-  $scope.$on('$stateChangeSuccess', this.setActive );
 
+  $scope.$on('$stateChangeSuccess', this.setActive);
 };
 
 SiteHeaderController.$inject = $inject;
